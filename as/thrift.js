@@ -283,6 +283,7 @@ function register(channel, name, opts, handle, spec) {
             });
 
             if (stringifyResult.err) {
+                console.log('thrift error', stringifyResult.err);
                 return res.sendError('UnexpectedError',
                     'Could not serialize thrift');
             }
